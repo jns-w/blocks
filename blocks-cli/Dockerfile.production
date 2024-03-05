@@ -1,4 +1,6 @@
 FROM node:21-alpine
+ENV NEXT_PUBLIC_API_ENDPOINT=${NEXT_PUBLIC_API_ENDPOINT}
+ENV NEXT_PUBLIC_SECRET=${NEXT_PUBLIC_SECRET}
 WORKDIR /app
 COPY ./blocks-cli/package.json ./
 RUN yarn install --production
