@@ -9,9 +9,10 @@ const handle = app.getRequestHandler()
 
 const apiPaths = {
   '/api': {
-    target: 'http://localhost:8181',
+    // target: 'http://localhost:8181',
     // target: 'http://titan.wldspace.com:8181',
     // target: 'https://api.wldspace.com',
+    target: process.env.NEXT_PUBLIC_API_ENDPOINT,
     pathRewrite: {
       '^/api': '/api'
     },
