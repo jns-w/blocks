@@ -3,10 +3,12 @@ import axios, {AxiosRequestConfig} from "axios";
 import {AES} from "crypto-js";
 import * as process from "process";
 
+const API_URL = "https://blocks-server.wldspace.com"
 
 export const getURIPrefix = () => {
-  return isDev() ? "" : process.env.NEXT_PUBLIC_API_ENDPOINT || "";
+  return isDev() ? "" : process.env.NEXT_PUBLIC_API_ENDPOINT || API_URL
 }
+
 
 type Data = {
   success: boolean
