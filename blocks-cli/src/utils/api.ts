@@ -3,7 +3,7 @@ import axios, {AxiosRequestConfig} from "axios";
 import {AES} from "crypto-js";
 import * as process from "process";
 
-const API_URL = "https://blocks-server.wldspace.com"
+const API_URL = "https://blocks-server.capybara.wldspace.com"
 
 export const getURIPrefix = () => {
   return isDev() ? "" : process.env.NEXT_PUBLIC_API_ENDPOINT || API_URL
