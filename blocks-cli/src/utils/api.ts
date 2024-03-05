@@ -46,6 +46,7 @@ export const req = {
   },
   // encrypted requests encrypts payload and places it under payload key in data object
   encPut: async (endpoint: string, payload: object, headers?: object) => {
+    console.log("PUT", getURIPrefix(), endpoint)
     const res = await axios.put(`${getURIPrefix()}${endpoint}`, {
         payload: ENC.aes(payload)
       },
