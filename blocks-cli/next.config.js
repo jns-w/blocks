@@ -5,7 +5,7 @@ module.exports = withPlugins([], {
         return [
             {
                 source: '/api/:path*',
-                destination: `${process.env.NEXT_PUBLIC_API_ENDPOINT}/api/:path*`
+                destination: 'https://blocks-server.capybara.wldspace.com/api/:path*'
             }
         ]
     }
