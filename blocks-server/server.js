@@ -26,7 +26,7 @@ const io = setIO(server)
 setIOConnections(io)
 
 const corsOptions = {
-  origins: ["http://localhost:3000"],
+  origins: ["http://localhost:3000", "https://blocks.jonaswong.dev", "https://blocks.wldspace.com"],
   methods: ["GET", "POST", "PUT"],
   optionsSuccessStatus: 200
 }
