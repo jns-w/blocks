@@ -1,0 +1,4 @@
+{
+    "schemaVersion": 2,
+    "dockerfilePath": "./blocks-cli/Dockerfile.production"
+}
