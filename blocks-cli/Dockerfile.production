@@ -2,7 +2,7 @@ FROM node:21-alpine
 WORKDIR /app
 COPY ./blocks-cli/package.json ./
 RUN yarn install --production
-COPY ./blocks-cli./ .
-RUN yarn run build
+COPY ./blocks-cli/ .
+RUN yarn add typescript tsc ts-node && yarn build
 CMD ["yarn", "start"]
 EXPOSE 3000
