@@ -5,7 +5,7 @@ import * as process from "process";
 
 
 export const getURIPrefix = () => {
-  return isDev() ? "" : process.env.NEXT_PUBLIC_API_ENDPOINT;
+  return isDev() ? "" : process.env.NEXT_PUBLIC_API_ENDPOINT || "";
 }
 
 type Data = {
