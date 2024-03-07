@@ -159,7 +159,6 @@ export const authedReq = {
 const ENC = {
   aes: (payload: object) => {
     const message = JSON.stringify(payload)
-    console.log("s", process.env.NEXT_PUBLIC_SECRET)
     const ciphertext = AES.encrypt(message, process.env.NEXT_PUBLIC_SECRET!).toString()
     return ciphertext
   },
