@@ -12,7 +12,6 @@ import {useRouter} from "next/router";
 import {useEventListener} from "usehooks-ts";
 import {useAtom} from "jotai";
 import {authTokenAtom, userAtom} from "@/atoms";
-import { unstable_noStore as noStore } from 'next/cache'
 
 const SignIn = () => {
   const [inputs, setInputs] = useState({email: "", password: ""})
@@ -25,9 +24,6 @@ const SignIn = () => {
   const router = useRouter()
   const passwordRef: React.Ref<any> = useRef()
   const emailRef: React.Ref<any> = useRef()
-
-  noStore()
-  console.log('noStore', process.env.NEXT_PUBLIC_SECRET)
 
   const signIn = async () => {
     try {
