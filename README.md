@@ -2,6 +2,7 @@
 
 Github: [https://github.com/jns-w/blocks](https://github.com/jns-w/blocks)\
 Demo site: [https://blocks.jonaswong.dev](https://blocks.jonaswong.dev)\
+
 ![](https://res.cloudinary.com/ds1s8ilcc/image/upload/v1706939451/Devsite/blocks/Blocks-main_x9qoss.png)
 
 > #### Frontend Stack:
