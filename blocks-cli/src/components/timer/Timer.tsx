@@ -73,12 +73,13 @@ export const Timer = () => {
   );
 
   useEffect(() => {
+    if (!user._id) return;
     connectSocket();
     loadDB();
     return () => {
       disconnectSocket();
     };
-  }, []);
+  }, [user._id]);
 
   useEffect(() => {
     if (!user._id && socket.connected) {
@@ -472,7 +473,6 @@ const SyncLoader = styled.div`
   z-index: 10;
   top: 0;
   left: 0;
-  width: 100%;
   // width: 100%;
   // height: 100%;
   width: 100px;
@@ -484,15 +484,15 @@ const SyncLoader = styled.div`
 `;
 
 const Container = styled.div`
-  min-width: 450px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    min-width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-  ${media.phone} {
-    padding: 0;
-    min-width: 100vw;
-  }
+    ${media.phone} {
+        width: 100%;
+        padding: 10px;
+    }
 `;
 
 const TimerContainer = styled.div`

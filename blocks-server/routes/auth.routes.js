@@ -111,6 +111,7 @@ router.post('/signin', cors(corsOptions), async (req, res, next) => {
         const verified = user.verifyPassword(password)
         if (!verified) throw new UnauthorizedError("Invalid credentials")
         const token = await jwt.sign({userId: user._id}, process.env.SECRET)
+        // get app state and return it as well
         return res.status(200).json({success: true, data: {token}})
     } catch (err) {
         next(err)
