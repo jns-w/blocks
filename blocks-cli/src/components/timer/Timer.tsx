@@ -484,14 +484,14 @@ const SyncLoader = styled.div`
 `;
 
 const Container = styled.div`
-    min-width: 450px;
+    min-width: 410px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 
     ${media.phone} {
-        width: 100%;
-        padding: 10px;
+        min-width: 100vw;
+        padding: 0 15px;
     }
 `;
 
